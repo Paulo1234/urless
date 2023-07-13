@@ -18,6 +18,5 @@ exports.read = async (req, res) => {
     const result = await url.findOne({
         where: { name: shorten }
     })
-    console.log(result)
     res.redirect(result.toJSON().urlCode)
 }
